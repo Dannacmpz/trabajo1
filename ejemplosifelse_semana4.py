@@ -1,10 +1,21 @@
-from eii_utils import leer_entero
+from eii_utils import leer_entero, imprimir_titulo_decorado, limpiar_consola
 
-#v
-num_lote: int=0
+#variables
+limpiar_consola()
+horas_trabajadas:int=0
+tarifa_hora: int=0
+salario:int=0
 
-#input
-num_lote=leer_entero("digite su num lote: ")
+#inputs
+horas_trabajadas=leer_entero("digite la cantidad de horas trabajadas: ")
+tarifa_hora=leer_entero("digite la tarifa por hora: ")
 
 #process
-if num_lote%2=0:
+if horas_trabajadas<=40:
+    salario=horas_trabajadas*tarifa_hora
+else:
+    salario=(((horas_trabajadas-40)*tarifa_hora*1.5)+ 40*tarifa_hora)
+
+#salidas
+imprimir_titulo_decorado("SALARIO MENSUAL",20)
+print(f"su salario es de {salario} colones en total")
