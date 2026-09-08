@@ -28,6 +28,10 @@ else:
 
 
 salario_neto= salario_bruto- impuestos
+salario_neto= salario_neto+hijos* 1710
+if esta_casado:
+    salario_neto= salario_neto+2590
+    
 bp= salario_bruto*0.01
 sem=salario_bruto*0.055
 ivm= salario_bruto*0.0433
