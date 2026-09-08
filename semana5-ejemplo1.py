@@ -20,7 +20,9 @@ if salario_bruto <=918000:
 elif salario_bruto<=1347000:
     impuestos= (salario_bruto - 918000)*0.1
 elif salario_bruto<=  2364000:
-    impuestos=42900 + 354450+ (salario_bruto-2364000)*0.2
+    impuestos=42900 + (salario_bruto-134700)*0.15
+elif salario_bruto<=4727000:
+    impuestos=42900+354450 + (salario_bruto-2364000)*0.2
 else:
     impuestos= 42900+354450+472600+(salario_bruto-4727000)*0.25
 
@@ -28,4 +30,4 @@ else:
 salario_neto= salario_bruto- impuestos
 bp= salario_bruto*0.01
 sem=salario_bruto*0.055
-ivm= salario_bruto*0.433
+ivm= salario_bruto*0.0433
